@@ -93,7 +93,7 @@ void main(){
         if(!this.gl||!this.glProgram)
             return;
         let ${name} = this.gl.getUniformLocation(this.glProgram,'${name}');
-        this.gl.${ctxMethod}(${name}, ${jsType}(newVal));
+        this.gl.${ctxMethod}(${name}, newVal);
         this.gl.drawArrays(this.gl.TRIANGLE_STRIP, this.$props['indicesStart'], this.$props['indicesCount']);
     },
     `
